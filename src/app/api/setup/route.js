@@ -6,7 +6,7 @@ export async function GET(req){
       console.log('Creating Table')
   
       const result = await excuteQuery({
-        query: `CREATE TABLE notes (
+        query: `CREATE TABLE IF NOT EXISTS notes (
                 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
                 content VARCHAR(45)
                 );`,

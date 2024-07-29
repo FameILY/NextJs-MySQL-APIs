@@ -1,22 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
-run command npm install
+## API Reference
 
+#### GET notes
 
-start the server using 
-npm run dev 
-OR 
-pnpm dev
+```http
+  GET localhost:3000/api/CnR
+```
 
-take a look at the db.js file under src/app/lib
-create a .env file and add the necessary environment variables according to db.js file
+#### Get a specific note with id
 
-and open up your browser or postman and hit 
-localhost:{your_port_number}/api/setup 
-to create the table necessary for the crud operations
+```http
+  GET localhost:3000/api/CnR/{your_note_id}
+```
 
-then open up api/CnR folder and go through the apis and hit according to the file structure
+#### Create a note (needs Postman)
 
-eg. for api/CnR/[id]/route.js 
-localhost:{your_port_number}/api/CnR/{your_id}
+```http
+  POST localhost:3000/api/CnR
+```
+this takes a form data 
+content=your text
+
+#### Update a note (needs Postman)
+
+```http
+  PUT localhost:3000/api/CnR
+```
+this takes a form data 
+content=your text
+
+#### DELETE a specific note with id
+
+```http
+  DELETE localhost:3000/api/CnR/{your_note_id}
+```
