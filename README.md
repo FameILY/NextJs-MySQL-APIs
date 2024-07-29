@@ -46,7 +46,7 @@ First to create a table, hit the following api using Postman or your web browser
 ```http
 localhost/3000/api/setup
 
-````
+```
 
 
 ## API Reference
